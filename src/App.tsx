@@ -1,7 +1,15 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-
+import Layout from "./Components/Layout";
+import Home from "./Pages/Home";
 function App() {
-  return <h1>Hey Aman</h1>;
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+      </Route>
+    </Routes>
+  );
 }
 
 export default App;
